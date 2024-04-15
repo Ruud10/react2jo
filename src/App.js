@@ -1,16 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import {Routes,Route} from 'react-router-dom';
+import LoginPage from './Pages/LoginPage/LoginPage';
+import FestivalPage from './Pages/DetailPages/FestivalPage/FestivalPage';
+import MainPage from './Pages/MainPage/MainPage';
+import MyPage from './Pages/MyPage/MyPage';
+import CampingPage from './Pages/DetailPages/CampingPage/CampingPage';
 
 function App() {
     return (
-        <div className="App">
-            <h1>Test</h1>
-            <h2>김혜린 추가</h2>
-            경록 테스트
-            <h2>우명균 추가</h2>
-            <h2>isus test2</h2>
-            <h2>나의 테스트</h2>
-        </div>
+       <>
+        <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/MyPage" element={<MyPage />} />
+            <Route path="/camping/:id" element={<CampingPage />} />
+            <Route path="/festival/:id" element={<FestivalPage />} />
+        </Routes>
+       </>
     );
 }
 
