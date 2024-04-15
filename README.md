@@ -1,70 +1,39 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+24.04.15일(월)  회의 목록 1. 주제 정하기 (캠핑장 + 주변 관광지 검색 및 결과 공유 웹페이지) 2. 사용할 스킬 정하기 3. 영역 분담하기 4. API : TourAPI (한국관광공사_고캠핑 정보 조회서비스GW , 한국관광공사국문 관광정보 서비스_GW), 카카오 좌표 API, 네이버 지도 API   프레임워크 : REACT 상태관리 : 리액트쿼리 + 리덕스툴킷 CSS : bootstrap
+DB : Firebase (이게 좋은게,,,, 실시간으로 정보를 불러올 수 있어요...)  CSS : 스네이크 기법  쿼리 , JS : 카멜기법
 
-## Available Scripts
+** 주의사항 : 모바일 반응형 웹 신경쓰기....
 
-In the project directory, you can run:
 
-### `npm start`
+# Project 
+: 탐 프로젝트
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### ✅ URL : 
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 주의사항
 
-### `npm run build`
+- h1 div 등 태그에 직접 스타일 주지 말 것!
+- 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 코드,변수 컨벤션
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 코드는 최대한 함수형으로 작성
+- 변수명은 최대한 알아보기 쉽게 작성 (직관성)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 사용된 기술
+- react, react-query, bootstrap, 무료 영화 API 등
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 배포
+- vercel
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Problem
+- 인기순, 최신순, 장르별 필터과정에서 각각의 버튼 클릭 이후에 재클릭 했을 경우 동작하지 않은 문제
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Solution
+- 각 버튼을 클릭 이후 상태값 초기화, 페이지네이션 초기화 진행
