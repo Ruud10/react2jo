@@ -34,6 +34,7 @@
 - 라이브러리 : React , md5
 - 사용 언어 : React.js
 - 상태 관리 : 리액트 쿼리, 리덕스 툴킷
+- DB : firebase
 - 형상 관리 : Git, Git Kraken
 - 협업 툴 : Figma
 - API : TourAPI https://api.visitkorea.or.kr/#/ (한국관광공사_고캠핑 정보 조회서비스GW , 한국관광공사국문 관광정보 서비스_GW) , 카카오 공용 API, 네이버 지도 API
