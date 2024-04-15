@@ -9,7 +9,7 @@
 ---
 
 ### ✅ URL : 
-
+### ✅ 기획서 : https://www.figma.com/file/Fzljm8h79yhOFY2zbmHyY1/%ED%8F%AD%ED%92%8D?type=design&node-id=0-1&mode=design&t=TMMpCGWpN0SAB2z6-0
 ---
 
 ### ✅ 설명 : 캠핑을 많이하는 요즘 유저들에게 좋은 캠핑장 정보와 관련된 지역 축제정보를 제공
