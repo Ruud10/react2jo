@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import AppLayout from './Layout/AppLayout';
 import MainPage from './Pages/MainPage/MainPage';
 import LoginPage from './Pages/LoginPage/LoginPage';
-import LogoutPage from './Pages/LogoutPage/LogoutPage';
+import RegisterPage from './Pages/RegisterPage/RegisterPage';
 import MyPage from './Pages/MyPage/MyPage';
 import FestivalPage from './Pages/FestivalPage/FestivalPage';
 import FestivalDetailPage from './Pages/FestivalDetailPage/FestivalDetailPage';
@@ -20,7 +20,7 @@ function App() {
                     <Route index element={<MainPage />} />
                     <Route path="auth">
                         <Route path="login" element={<LoginPage />} />
-                        <Route path="logout" element={<LogoutPage />} />
+                        <Route path="register" element={<RegisterPage />} />
                         <Route path="myPage" element={<MyPage />} />
                     </Route>
                     <Route path="camping">

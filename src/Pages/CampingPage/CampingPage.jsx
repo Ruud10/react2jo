@@ -4,8 +4,6 @@ const CampingPage = () => {
   return (
     <div>CampingPages
 
-
-      <h2>asdasd</h2>
     </div>
   )
 }
