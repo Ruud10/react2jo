@@ -2,7 +2,7 @@ import React from 'react'
 
 const CampingPage = () => {
   return (
-    <div>CampingPage</div>
+    <div>CampingPages</div>
   )
 }
 
