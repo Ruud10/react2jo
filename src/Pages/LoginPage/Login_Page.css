@@ -3,10 +3,10 @@
 }
 
 .LoginContainer h1{
+    color:orange;
     display: flex;
     justify-content: center;
     align-items: center;
-    color:orange;
 }
 
 label{
@@ -34,6 +34,7 @@ input{
 .LoginBtnContainer{
     display: flex;
     justify-content: center;
+    padding: 30px;
 }
 
 .inputContainer input {
@@ -42,25 +43,25 @@ input{
     
   }
 
+  .NoIdText{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    color: gray;
+  }
+
   .warningText{
+    font-size: 15px;
+    color: red;
+  }
+
+  .errorText{
     display: flex;
     justify-content: center;
     font-size: 13px;
     color: red;
   }
 
-  .YesIdText{
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    color: gray;
-    font-size: 13px;
-  }
+  @media (max-width: 768px) {
 
-
-@media (max-width: 768px) {
-  .inputContainer input {
-    font-size: 14px; /* 폰트 크기 줄이기 */
-    padding: 8px; /* 패딩 조정 */
   }
-}

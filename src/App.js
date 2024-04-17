@@ -1,4 +1,5 @@
 import './App.css';
+import React, { useState } from 'react'
 import { Routes, Route } from 'react-router-dom';
 import AppLayout from './Layout/AppLayout';
 import MainPage from './Pages/MainPage/MainPage';
@@ -13,13 +14,16 @@ import NotFoundPage from './Pages/NotFoundPage/NotFoundPage';
 import SearchedPage from './Pages/SearchedPage/SearchedPage';
 
 function App() {
+    const [LoginTrue, setLoginTrue] = useState(false);
+
+
     return (
         <>
             <Routes>
                 <Route path="/" element={<AppLayout />}>
                     <Route index element={<MainPage />} />
                     <Route path="auth">
-                        <Route path="login" element={<LoginPage />} />
+                        <Route path="login" element={<LoginPage setLoginTrue={setLoginTrue} />} />
                         <Route path="register" element={<RegisterPage />} />
                         <Route path="myPage" element={<MyPage />} />
                     </Route>
