@@ -1,0 +1,67 @@
+.LoginContainer{
+    padding:100px
+}
+
+.LoginContainer h1{
+    color:orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label{
+    padding-top: 10px;
+}
+.inputContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+input{
+    font-size: 18px;
+}
+
+.LoginBtn{
+    width: 100px;
+    height: 40px;
+    background-color: orange;
+    border: none;
+}
+
+.LoginBtnContainer{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.inputContainer input {
+    width: 400px; /* 너비 조정 */
+    padding: 8px; /* 내부 여백 조정 */
+    
+  }
+
+  .NoIdText{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    color: gray;
+  }
+
+  .warningText{
+    font-size: 15px;
+    color: red;
+  }
+
+  .errorText{
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    color: red;
+  }
+
+  @media (max-width: 768px) {
+
+  }

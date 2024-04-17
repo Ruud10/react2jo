@@ -1,9 +1,10 @@
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import AppLayout from './Layout/AppLayout';
 import MainPage from './Pages/MainPage/MainPage';
 import LoginPage from './Pages/LoginPage/LoginPage';
-import LogoutPage from './Pages/LogoutPage/LogoutPage';
+import RegisterPage from './Pages/RegisterPage/RegisterPage';
 import MyPage from './Pages/MyPage/MyPage';
 import FestivalPage from './Pages/FestivalPage/FestivalPage';
 import FestivalDetailPage from './Pages/FestivalDetailPage/FestivalDetailPage';
@@ -11,16 +12,47 @@ import CampingPage from './Pages/CampingPage/CampingPage';
 import CampingDetailPage from './Pages/CampingDetailPage/CampingDetailPage';
 import NotFoundPage from './Pages/NotFoundPage/NotFoundPage';
 import SearchedPage from './Pages/SearchedPage/SearchedPage';
+import app from './firebase';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { useDispatch } from 'react-redux';
+import userSlice, { clearUser} from './reducers/userSlice';
+
 
 function App() {
+    const [LoginTrue, setLoginTrue] = useState(false);
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const appAuth = getAuth(app); // firebase auth 인증서 
+
+    useEffect(()=>{
+        const unsubscribe = onAuthStateChanged(appAuth,(user)=>{// onAuth 인증된 사람만 이동되게
+          if(user){
+            navigate('/');
+            //userSlice Update 현재 유저로 상태 업데이트
+            dispatch(userSlice.actions.setUser({
+              uid: user.uid,
+              displayName: user.displayName,
+              photoURL : user.photoURL
+            }))
+          }else{
+            navigate('/auth/login');
+            dispatch(clearUser());
+          }
+        })
+        return () =>{
+          unsubscribe(); // Unsubscribe로 등록해준 부분을 없애주는 부분
+        }
+      },[appAuth])
+
+
     return (
         <>
             <Routes>
-                <Route path="/" element={<AppLayout />}>
+                <Route path="/" element={<AppLayout/>}>
                     <Route index element={<MainPage />} />
                     <Route path="auth">
-                        <Route path="login" element={<LoginPage />} />
-                        <Route path="logout" element={<LogoutPage />} />
+                        <Route path="login" element={<LoginPage setLoginTrue={setLoginTrue} />} />
+                        <Route path="register" element={<RegisterPage />} />
                         <Route path="myPage" element={<MyPage />} />
                     </Route>
                     <Route path="camping">

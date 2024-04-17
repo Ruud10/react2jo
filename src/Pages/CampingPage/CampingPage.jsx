@@ -2,7 +2,9 @@ import React from 'react'
 
 const CampingPage = () => {
   return (
-    <div>CampingPages</div>
+    <div>CampingPages
+
+    </div>
   )
 }
 

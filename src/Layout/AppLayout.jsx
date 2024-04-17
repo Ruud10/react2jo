@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Outlet, useNavigate } from 'react-router-dom';
 
-const AppLayout = () => {
+const AppLayout = ({LoginTrue}) => {
     const [keyword, setKeyword] = useState('');
 
     const navigate = useNavigate();
