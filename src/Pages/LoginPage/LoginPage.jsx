@@ -5,7 +5,6 @@ import {useForm} from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import app from '../../firebase';
-import AppLayout from '../../Layout/AppLayout';
 
 
 const LoginPage = ({setLoginTrue}) => {
@@ -61,7 +60,6 @@ const LoginPage = ({setLoginTrue}) => {
                 </div>
                 <Link to={'/auth/register'} className='NoIdText'>회원가입 하러가기</Link>
             </Row>
-            {/* {loading && <AppLayout loading = {loading} />} */}
         </form>
   )
 }
