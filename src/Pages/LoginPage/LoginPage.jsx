@@ -21,7 +21,6 @@ const LoginPage = ({setLoginTrue}) => {
             setLoginTrue(true);
             alert('로그인 되었습니다.');
             navigate('/');
-
         } catch (error) {
             console.error(error);
             setErrorMessages(error.message);
