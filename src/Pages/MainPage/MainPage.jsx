@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import KakaoMapLoader from './components/KakaoMapLoader';
 
 const MainPage = () => {
-  return (
-    <div>MainPage</div>
-  )
-}
+    return (
+        <div>
+            <KakaoMapLoader />
+        </div>
+    );
+};
 
-export default MainPage
+export default MainPage;
