@@ -24,25 +24,25 @@ function App() {
     const dispatch = useDispatch();
     const appAuth = getAuth(app); // firebase auth 인증서 
 
-    useEffect(()=>{
-        const unsubscribe = onAuthStateChanged(appAuth,(user)=>{// onAuth 인증된 사람만 이동되게
-          if(user){
-            navigate('/');
-            //userSlice Update 현재 유저로 상태 업데이트
-            dispatch(userSlice.actions.setUser({
-              uid: user.uid,
-              displayName: user.displayName,
-              photoURL : user.photoURL
-            }))
-          }else{
-            navigate('/auth/login');
-            dispatch(clearUser());
-          }
-        })
-        return () =>{
-          unsubscribe(); // Unsubscribe로 등록해준 부분을 없애주는 부분
-        }
-      },[appAuth])
+    // useEffect(()=>{
+    //     const unsubscribe = onAuthStateChanged(appAuth,(user)=>{// onAuth 인증된 사람만 이동되게
+    //       if(user){
+    //         navigate('/');
+    //         //userSlice Update 현재 유저로 상태 업데이트
+    //         dispatch(userSlice.actions.setUser({
+    //           uid: user.uid,
+    //           displayName: user.displayName,
+    //           photoURL : user.photoURL
+    //         }))
+    //       }else{
+    //         navigate('/auth/login');
+    //         dispatch(clearUser());
+    //       }
+    //     })
+    //     return () =>{
+    //       unsubscribe(); // Unsubscribe로 등록해준 부분을 없애주는 부분
+    //     }
+    //   },[appAuth])
 
 
     return (
