@@ -61,7 +61,7 @@ const LoginPage = ({setLoginTrue}) => {
                 </div>
                 <Link to={'/auth/register'} className='NoIdText'>회원가입 하러가기</Link>
             </Row>
-            {loading && <AppLayout loading = {loading} />}
+            {/* {loading && <AppLayout loading = {loading} />} */}
         </form>
   )
 }

@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Outlet, useNavigate } from 'react-router-dom';
 
-const AppLayout = ({loading}) => {
+const AppLayout = ({LoginTrue}) => {
     const [keyword, setKeyword] = useState('');
 
     const navigate = useNavigate();
@@ -17,10 +17,6 @@ const AppLayout = ({loading}) => {
         navigate(`/search?q=${keyword}`);
         setKeyword('');
     };
-
-    const logoutFalse = () => {
-        loading(false);
-    }
 
     return (
         <div>
@@ -59,19 +55,14 @@ const AppLayout = ({loading}) => {
                             <Button variant="outline-danger" type="submit">
                                 Search
                             </Button>
-                            {loading ? <Button
+                            <Button
                                 className="ms-3"
                                 variant="outline-danger"
-                                onClick={logoutFalse}
-                            >
-                                Logout
-                            </Button> : <Button
-                                className="ms-3"
-                                variant="outline-danger"
+                                // type="submit"
                                 onClick={() => navigate('/auth/login')}
                             >
                                 Login
-                            </Button>}
+                            </Button>
                         </Form>
                     </Navbar.Collapse>
                 </Container>
