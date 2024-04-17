@@ -12,15 +12,17 @@ import CampingPage from './Pages/CampingPage/CampingPage';
 import CampingDetailPage from './Pages/CampingDetailPage/CampingDetailPage';
 import NotFoundPage from './Pages/NotFoundPage/NotFoundPage';
 import SearchedPage from './Pages/SearchedPage/SearchedPage';
+import app from './firebase';
+import { getAuth } from 'firebase/auth';
 
 function App() {
     const [LoginTrue, setLoginTrue] = useState(false);
-
+    const appAuth = getAuth(app); // firebase auth 인증서 
 
     return (
         <>
             <Routes>
-                <Route path="/" element={<AppLayout />}>
+                <Route path="/" element={<AppLayout/>}>
                     <Route index element={<MainPage />} />
                     <Route path="auth">
                         <Route path="login" element={<LoginPage setLoginTrue={setLoginTrue} />} />
