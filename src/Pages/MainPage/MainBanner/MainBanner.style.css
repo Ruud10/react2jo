@@ -1,0 +1,84 @@
+.slider-area{
+    height: 60vh;
+}
+
+.slider-item-box {
+    display: flex !important;
+    align-items: center;
+    height: 60vh;
+
+}
+
+.slider-color {
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.slider-item {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+    position: block;
+    height: 60vh;
+}
+
+.container-height {
+    height: 60vh;
+    padding-top: 2.5rem;
+}
+
+.slider-text {
+    margin: 0rem 2rem;
+    width: 40vw;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+.slider-text-items {
+    width: 75%;
+}
+
+.slider-img-box {
+    width: 60vw;
+    height: 47vh;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-img {
+    width: 60vw;
+    min-height: 47vh;
+    border-radius: 0.75rem;
+    display: block;
+    position: inherit !important;
+}
+
+.chung-chung {
+    background-color: rgb(221, 244, 255);
+    background-size: 50%;
+}
+
+.gang-won {
+    background-color: rgb(239, 255, 248);
+}
+
+.kyung-sang {
+    background-color: rgb(255, 250, 244);
+}
+
+.jun-ra {
+    background-color: rgb(255, 250, 223);
+}
+
+.kyung-ki {
+    background-color: rgb(250, 246, 255);
+}
