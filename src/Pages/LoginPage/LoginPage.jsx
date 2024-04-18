@@ -39,15 +39,15 @@ const LoginPage = ({setLoginTrue}) => {
             <Row className='LoginContainer'>
                 <h1>로그인</h1>
                 <div className='inputContainer'>
-                    <label htmlFor='email' >이메일</label>
-                    <input type='email' name='email' id='email' placeholder='이메일을 입력해주세요.'
+                    <label className = 'labelBox' htmlFor='email' >이메일</label>
+                    <input className = 'inputBox'type='email' name='email' id='email' placeholder='이메일을 입력해주세요.'
                     {...register("email", {required:true , pattern:/^\S+@\S+$/i})}
                     ></input>
                     {errors.email && <p className='warningText'>이메일을 입력해주세요.</p>}
                 </div> 
                 <div className='inputContainer'>
-                    <label htmlFor='password'>비밀번호</label>
-                    <input type='password' name='password' id='password' placeholder='비밀번호를 입력해주세요.'
+                    <label className = 'labelBox' htmlFor='password'>비밀번호</label>
+                    <input className = 'inputBox' type='password' name='password' id='password' placeholder='비밀번호를 입력해주세요.'
                     {...register("password",{required:true, minLength:6})}
                     ></input>
                     {errors.password && <p className='warningText'>비밀번호를 잘못입력하셨습니다.</p>}

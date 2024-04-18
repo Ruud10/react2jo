@@ -22,6 +22,7 @@ export const userSlice = createSlice({
         clearUser:(state) => {
             state.currentUser = {};
         },
+        //이미지 수정할때 사용할 겁니다~~
         setPhotoUrl:(state, action) => {
             state.currentUser = {
                 ...state.currentUser,
