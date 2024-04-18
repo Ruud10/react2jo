@@ -2,13 +2,11 @@ import React from 'react';
 import KakaoMapLoader from './components/KakaoMapLoader';
 import { useCampingQuery } from '../../Hooks/useCamping';
 import { useFestivalQuery } from '../../Hooks/useFestival';
-import MainBanner from './MainBanner/MainBanner'
+import MainBanner from './MainBanner/MainBanner';
 
 const MainPage = () => {
     // const { data, isLoading, isError, error } = useCampingQuery(37.5665, 126.978);
     const { data, isLoading, isError, error } = useFestivalQuery('20240418');
-
-      <MainBanner />
 
     if (isLoading) {
         return <h1>Loading....</h1>;
@@ -20,7 +18,13 @@ const MainPage = () => {
 
     console.log(data);
 
-    return <div>{/* <KakaoMapLoader /> */}</div>;
+    return (
+        <div>
+            {/* <KakaoMapLoader /> */}
+
+            <MainBanner />
+        </div>
+    );
 };
 
 export default MainPage;
