@@ -29,6 +29,7 @@ const AppLayout = ({ isLogged }) => {
         signOut(auth).then(() => {}).catch((err) => {
             console.error(err);
         });
+        alert('로그아웃 되었습니다.');
     }
 
     const handleLogin = () => {
