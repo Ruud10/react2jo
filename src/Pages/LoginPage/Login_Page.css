@@ -1,0 +1,89 @@
+.LoginForm {
+    overflow-x: hidden; 
+    padding: 20px; 
+
+}
+.LoginContainer h1{
+    color:orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+.LoginContainer {
+    max-width: 400px; /* 최대 너비를 400px로 설정 */
+    margin: 0 auto; /* 가운데 정렬 */
+}
+
+.labelBox{
+    padding-top: 10px;
+}
+.inputContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.inputBox{
+    font-size: 18px;
+}
+
+.LoginBtn{
+    width: 100px;
+    height: 40px;
+    background-color: orange;
+    border: none;
+    border-radius: 20px;
+}
+
+.LoginBtnContainer{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.inputContainer input {
+    width: 400px;
+    padding: 8px;
+    
+  }
+
+  .NoIdText{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    color: gray;
+  }
+
+  .warningText{
+    font-size: 15px;
+    color: red;
+  }
+
+  .errorText{
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    color: red;
+  }
+
+  #email,
+  #password,
+  #name {
+      width: 340px;
+      padding: 10px;
+      font-size: 15px; 
+      margin-bottom: 10px; 
+  }
+  
+
+  @media (max-width: 768px) {
+      #email,
+      #password,
+      #name {
+          font-size: 15px; 
+      }
+  }

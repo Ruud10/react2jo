@@ -1,0 +1,56 @@
+.myPageContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myPageInfoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.myPageUserImageBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.myPageUserImage{
+    width: 100px;
+}
+
+.myPageUserInfoContainer{
+    margin-top: 50px;
+}
+
+.myPageUserInfoContainer .nav-link.active {
+    color: orange;
+  }
+  
+  .myPageUserInfoContainer .nav-link {
+    color: black;
+  }
+  
+
+.ImageEditBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.ImageEditBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    background-color: orange;
+    border: none;
+    border-radius: 20px;
+    color: white;
+}

@@ -4,13 +4,21 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import Dropdown from 'react-bootstrap/Dropdown'; // 드롭다운 컴포넌트 추가
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Outlet, useNavigate } from 'react-router-dom';
+import { getAuth, signOut } from 'firebase/auth';
+import app from '../firebase';
+import { useSelector } from 'react-redux';
+import '../Layout/App_Layout.css';
+import Logo from '../assets/siteLogo.png'
 
-const AppLayout = () => {
+const AppLayout = ({ isLogged }) => {
+    const { currentUser } = useSelector(state => state.user);
+    const [dropdownOpen, setDropdownOpen] = useState(false); // 드롭다운 상태 추가
     const [keyword, setKeyword] = useState('');
-
     const navigate = useNavigate();
+    const auth = getAuth(app);
 
     const searchByKeyword = (event) => {
         event.preventDefault();
@@ -18,12 +26,32 @@ const AppLayout = () => {
         setKeyword('');
     };
 
+    const handleLogout = () => {
+        signOut(auth).then(() => {}).catch((err) => {
+            console.error(err);
+        });
+        alert('로그아웃 되었습니다.');
+        navigate('/');
+    }
+
+    const handleLogin = () => {
+        navigate('/auth/login');
+    }
+
+    const handleMyPage = () =>{
+        navigate('/auth/myPage');
+    }
+
+    const toggleDropdown = () => {
+        setDropdownOpen(!dropdownOpen);
+    }
+
     return (
         <div>
             <Navbar expand="lg" className="bg-black">
                 <Container fluid>
-                    <Navbar.Brand className="text-danger fw-bold" href="/">
-                        여기로고
+                    <Navbar.Brand className="text-black fw-bold" href="/">
+                        <img src={Logo} alt="Logo" width="30" height="30" className="Logo" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
@@ -52,17 +80,32 @@ const AppLayout = () => {
                                 value={keyword}
                                 onChange={(event) => setKeyword(event.target.value)}
                             />
-                            <Button variant="outline-danger" type="submit">
+                            <Button variant="outline-dark" type="submit">
                                 Search
                             </Button>
-                            <Button
-                                className="ms-3"
-                                variant="outline-danger"
-                                // type="submit"
-                                onClick={() => navigate('/auth/login')}
-                            >
-                                Login
-                            </Button>
+                            {isLogged ? (
+                                <Dropdown show={dropdownOpen} onClick={toggleDropdown}>
+                                    <Dropdown.Toggle variant="outline-dark" id="dropdown-basic" className='drop-toggle' size="m">
+                                        <a className="userImageContainer">
+                                            <img src={currentUser.photoURL} className='userImage' alt="User" />
+                                        </a>
+                                        <a>{currentUser.displayName}</a>
+                                    </Dropdown.Toggle>
+                                    <Dropdown.Menu className="dropdownContainer">
+                                        <Dropdown className='UserName'>{currentUser.displayName} 님</Dropdown>
+                                        <Dropdown.Item onClick={handleMyPage}>마이페이지</Dropdown.Item>
+                                        <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                            ) : (
+                                <Button
+                                    className="ms-3"
+                                    variant="outline-dark"
+                                    onClick={handleLogin}
+                                >
+                                    Login
+                                </Button>
+                            )}
                         </Form>
                     </Navbar.Collapse>
                 </Container>
