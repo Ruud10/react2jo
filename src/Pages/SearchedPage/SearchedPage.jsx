@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { useSearchCampingQuery } from '../../hook/useSearchCamping'
+import { useSearchCampingQuery } from '../../hooks/useSearchCamping'
 import SearchedCampingCard from './components/SearchedCampingCard'
 import { Row, Col, Container, Alert } from 'react-bootstrap'
 import ReactPaginate from 'react-paginate'
