@@ -30,6 +30,7 @@ const AppLayout = ({ isLogged }) => {
             console.error(err);
         });
         alert('로그아웃 되었습니다.');
+        navigate('/');
     }
 
     const handleLogin = () => {
