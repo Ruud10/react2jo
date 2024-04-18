@@ -1,7 +1,7 @@
 import React from 'react';
 import KakaoMapLoader from './components/KakaoMapLoader';
-import { useCampingQuery } from '../../Hooks/useCamping';
-import { useFestivalQuery } from '../../Hooks/useFestival';
+import { useCampingQuery } from '../../hooks/useCamping';
+import { useFestivalQuery } from '../../hooks/useFestival';
 import MainBanner from './MainBanner/MainBanner';
 
 const MainPage = () => {
