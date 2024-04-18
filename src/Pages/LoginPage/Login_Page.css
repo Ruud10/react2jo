@@ -16,7 +16,7 @@
     margin: 0 auto; /* 가운데 정렬 */
 }
 
-label{
+.labelBox{
     padding-top: 10px;
 }
 .inputContainer {
@@ -27,7 +27,7 @@ label{
     padding: 10px 0;
 }
 
-input{
+.inputBox{
     font-size: 18px;
 }
 

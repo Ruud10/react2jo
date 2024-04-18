@@ -65,23 +65,23 @@ const RegisterPage = () => {
             <Row className='LoginContainer'>
                 <h1>회원가입</h1>
                 <div className='inputContainer'>
-                    <label htmlFor='email' >이메일</label>
-                    <input type='email' name='email' id='email' placeholder='이메일을 입력해주세요.'
+                    <label className = 'labelBox' htmlFor='email' >이메일</label>
+                    <input className = 'inputBox' type='email' name='email' id='email' placeholder='이메일을 입력해주세요.'
                     {...register("email", {required:true , pattern:/^\S+@\S+$/i})}
                     ></input>
                     {errors.email && <p className='warningText'>이메일 형식이 아닙니다.</p>}
                 </div> 
                 <div className='inputContainer'>
-                    <label htmlFor='password'>비밀번호</label>
-                    <input type='password' name='password' id='password' placeholder='비밀번호를 입력해주세요.'
+                    <label className = 'labelBox' htmlFor='password'>비밀번호</label>
+                    <input className = 'inputBox' type='password' name='password' id='password' placeholder='비밀번호를 입력해주세요.'
                     {...register("password",{required:true, minLength:6})}
                     ></input>
                     {errors.password && errors.password.type === 'required' &&  (<p className='warningText'>비밀번호를 잘못입력하셨습니다.</p>)}
                     {errors.password && errors.password.type === 'minLength' && (<p className='warningText'>비밀번호는 최소 6자리 이상 입력해주세요.</p>)}
                 </div>
                 <div className='inputContainer'>
-                    <label htmlFor='name'>닉네임</label>
-                    <input type='name' name='name' id='name' placeholder='사용하실 닉네임을 입력해주세요.'
+                    <label className = 'labelBox' htmlFor='name'>닉네임</label>
+                    <input className = 'inputBox' type='name' name='name' id='name' placeholder='사용하실 닉네임을 입력해주세요.'
                     {...register("name",{required:true, maxLength:10})}
                     ></input>
                     {errors.name && errors.name.type === 'required' && <p className='warningText'>닉네임을 입력해주세요.</p>}

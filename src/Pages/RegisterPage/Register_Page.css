@@ -9,7 +9,7 @@
     color:orange;
 }
 
-label{
+.labelBox{
     padding-top: 10px;
 }
 .inputContainer {
@@ -20,7 +20,7 @@ label{
     padding: 10px;
 }
 
-input{
+.inputBox{
     font-size: 18px;
 }
 
