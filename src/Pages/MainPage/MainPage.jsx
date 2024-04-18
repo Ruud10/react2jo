@@ -21,7 +21,6 @@ const MainPage = () => {
     return (
         <div>
             {/* <KakaoMapLoader /> */}
-            zz
             <MainBanner />
         </div>
     );
