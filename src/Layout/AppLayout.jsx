@@ -11,6 +11,7 @@ import { getAuth, signOut } from 'firebase/auth';
 import app from '../firebase';
 import { useSelector } from 'react-redux';
 import '../Layout/App_Layout.css';
+import Logo from '../assets/siteLogo.png'
 
 const AppLayout = ({ isLogged }) => {
     const { currentUser } = useSelector(state => state.user);
@@ -50,7 +51,7 @@ const AppLayout = ({ isLogged }) => {
             <Navbar expand="lg" className="bg-black">
                 <Container fluid>
                     <Navbar.Brand className="text-black fw-bold" href="/">
-                        캠핑가자GO
+                        <img src={Logo} alt="Logo" width="30" height="30" className="Logo" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
