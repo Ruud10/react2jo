@@ -3,7 +3,7 @@ import './MainBanner.style.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
-import { useCampingBasedList } from '../../../Hooks/useCampingBasedList';
+import { useCampingBasedList } from '../../../hooks/useCampingBasedList';
 import { Alert, Container, Spinner } from 'react-bootstrap';
 
 const MainBanner = () => {
