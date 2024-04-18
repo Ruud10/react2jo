@@ -24,14 +24,15 @@ input{
     font-size: 18px;
 }
 
-.LoginBtn{
+.RegisterBtn{
     width: 100px;
     height: 40px;
     background-color: orange;
     border: none;
+    border-radius: 20px;
 }
 
-.LoginBtnContainer{
+.RegisterBtnContainer{
     display: flex;
     justify-content: center;
 }

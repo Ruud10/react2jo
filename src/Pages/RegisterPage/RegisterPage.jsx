@@ -88,8 +88,8 @@ const RegisterPage = () => {
                     {errors.name && errors.name.type === 'maxLength' && <p className='warningText'>닉네임을 10자 입력해주세요.</p>}
                 </div>
                 {errorMessages && <p className='warningText' variant='danger'>{errorMessages}</p>}
-                <div className='LoginBtnContainer'>
-                    <button className='LoginBtn'>{isLoading? 'Loading' :'회원가입' }</button>
+                <div className='RegisterBtnContainer'>
+                    <button className='RegisterBtn'>{isLoading? 'Loading' :'회원가입' }</button>
                 </div>
                     <Link to={'/auth/login'} className='YesIdText'>이미 아이디가 있다면..</Link>
              
