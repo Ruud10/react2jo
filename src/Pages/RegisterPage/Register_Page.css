@@ -9,7 +9,7 @@
     color:orange;
 }
 
-label{
+.labelBox{
     padding-top: 10px;
 }
 .inputContainer {
@@ -20,18 +20,19 @@ label{
     padding: 10px;
 }
 
-input{
+.inputBox{
     font-size: 18px;
 }
 
-.LoginBtn{
+.RegisterBtn{
     width: 100px;
     height: 40px;
     background-color: orange;
     border: none;
+    border-radius: 20px;
 }
 
-.LoginBtnContainer{
+.RegisterBtnContainer{
     display: flex;
     justify-content: center;
 }

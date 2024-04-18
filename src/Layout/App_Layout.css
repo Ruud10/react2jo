@@ -1,0 +1,39 @@
+.drop-toggle {
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+    overflow: hidden; /* 넘치는 부분 숨기기 */
+    text-overflow: ellipsis; /* 텍스트가 너무 길 경우 생략 후 마침표로 표시 */
+    border: none;
+}
+
+.userImage{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.UserName{
+    font-size: 15px;
+    color: orange;
+    font-weight: 700;
+    border-bottom: 1px solid #eeeeee;
+    padding:6px;
+    margin-left : 10px; 
+}
+
+.bg-black {
+    background-color: orange !important; /* 네비바의 배경색을 오렌지로 변경 */
+}
+
+.Logo{
+    width: 130px;
+    height: 25px;
+}
+
+
+@media (max-width: 768px) {
+    .bg-black {
+      justify-content: flex-end; /* 네비게이션 바 오른쪽 정렬 */
+    }
+  }
+
