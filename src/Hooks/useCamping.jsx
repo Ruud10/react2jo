@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import api from '../Utils/api';
+import api from '../utils/tourApi';
 
 // 캠핑의 정보를 가지고 오는 것
 // x좌표, y좌표, 범위( 최대 20000 : 20Km)

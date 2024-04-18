@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import api from '../Utils/api';
+import api from '../utils/tourApi';
 
 // 축제의 정보를 가지고 오는 것
 const fetchFestival = (eventStartDate) => {
