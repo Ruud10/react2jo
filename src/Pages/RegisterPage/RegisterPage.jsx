@@ -21,7 +21,7 @@ const RegisterPage = () => {
     const dispatch = useDispatch();
 
     const MoveToLogin = () =>{
-        navigate('/auth/login')
+        navigate('/')
     }
 
 
